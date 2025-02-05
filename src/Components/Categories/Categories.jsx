@@ -1,8 +1,11 @@
-import { Searchh } from "../Search/Searchh";
 import "./Categories.css";
 import { useState } from "react";
+import { Searchh } from "../Search/Searchh";
+import { GridGifts } from "../GridGifts/GridGifts";
+
 
 export const Categories = () => {
+
   const [category, setCategory] = useState([
     "One Punch",
     "Samurai X",
@@ -10,12 +13,15 @@ export const Categories = () => {
   ]);
 
   const onNewCategory = (newCategory) => {
+    
     if (category.includes(newCategory)) return;
     setCategory([newCategory, ...category]);
+  
   };
 
   return (
     <>
+
       {/* Titulo */}
       <h2>GifExpertApp</h2>
 
@@ -23,11 +29,14 @@ export const Categories = () => {
       <Searchh onNewCategory={onNewCategory} />
 
       {/* Listado de gift */}
-      <ol>
-        {category.map((category) => (
-          <li key={category}>{category}</li>
-        ))}
-      </ol>
+      {
+        category.map((category) => (
+          <GridGifts 
+            key={category} 
+            category={category} />
+        ))
+      }
+
     </>
   );
 };

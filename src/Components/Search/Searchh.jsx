@@ -13,7 +13,7 @@ export const Searchh = ({onNewCategory}) => {
         event.preventDefault();
         if(inputValue.trim().length <= 1) return;
         
-        onNewCategory(inputValue);
+        onNewCategory(inputValue.toLocaleLowerCase());
         setInputValue('');
     }
 
