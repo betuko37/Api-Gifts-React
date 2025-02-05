@@ -4,19 +4,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 16%;
+    width: 16%; /* Fija el ancho del navbar */
     height: 100vh;
     padding: 2rem 1rem;
     align-items: center;
     box-shadow: 3px 0 10px var(--shadown-color);
+    position: fixed; /* Fijo a la izquierda */
+    top: 0;
+    left: 0; /* Se asegura que quede pegado a la izquierda */
+    bottom: 0;
     transition: width 0.3s ease-in-out;
-    position: fixed;
 }
 
 .navbar:hover {
-    width: 20%; 
+    width: 20%; /* Expande el navbar al hacer hover */
 }
 
+/* Estilos adicionales no necesitan cambio */
 .title {
     font-size: 2.2rem;
     text-transform: uppercase;
@@ -58,7 +62,6 @@
     transform: scale(1.05);
 }
 
-/* Redes sociales */
 .socials {
     display: flex;
     justify-content: center;

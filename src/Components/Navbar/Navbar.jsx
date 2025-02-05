@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaGithub, FaHome, FaStar, FaFontAwesome, FaSearch, FaRandom } from "react-icons/fa";
 import PropTypes from "prop-types";
@@ -10,12 +11,12 @@ export const Navbar = ({empresa,id_fb,user_insta,user_git,num_wha}) => {
         <nav className="navbar">
       <h1 className="title">{empresa}</h1>
       <div className="links">
-        <a href="/"> Inicio <FaHome/></a>
-        <a href="/"> Favoritos <FaStar/></a>
-        <a href="/"> Tendencia <FaFontAwesome/></a>
-        <a href="/"> Buscar <FaSearch/> </a>
-        <a href="/"> Categorías <BiSolidCategoryAlt /></a>
-        <a href="/"> Aleatorio <FaRandom/></a>
+      <Link to="/"> Inicio <FaHome/></Link>
+        <Link to="/favorites"> Favoritos <FaStar/></Link>
+        <Link to="/tendency"> Tendencia <FaFontAwesome/></Link>
+        <Link to="/search"> Buscar <FaSearch/> </Link>
+        <Link to="/category"> Categorías <BiSolidCategoryAlt /></Link>
+        <Link to="/random"> Aleatorio <FaRandom/></Link>
       </div>
       <div className="socials">
         <a href={`https://www.facebook.com/profile.php?id=${id_fb}`} target="_blank" rel="noopener noreferrer">

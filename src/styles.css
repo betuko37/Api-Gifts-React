@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-color: #120D1B;
     --primary-color: #251B37;
     --secondary-color: #FFCACA;
@@ -6,18 +6,45 @@
     --shadown-color: #191324;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--text-color);
     padding: 1rem;
 }
 
+html {
+    height: 100%;
+    margin: 0;
+}
 
-body{
+body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'system-ui', roboto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    min-height: 100vh; 
+}
+
+
+.app-container {
+    display: flex;
+    width: 100%;
+    margin-left: 16%; 
+    flex-direction: column;
+    padding: 1rem;
+}
+
+main {
+    margin-left: 65%; 
+    width: 85%; 
+    padding: 2rem;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.navbar:hover + main {
+    margin-left: 85%; 
+    width: 80%;
 }
