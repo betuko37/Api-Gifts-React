@@ -1,0 +1,23 @@
+:root{
+    --background-color: #120D1B;
+    --primary-color: #251B37;
+    --secondary-color: #FFCACA;
+    --text-color: #FFFFFF;
+    --shadown-color: #191324;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'system-ui', roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
