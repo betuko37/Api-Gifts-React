@@ -12,39 +12,38 @@ a {
     padding: 1rem;
 }
 
-html {
+html, body {
     height: 100%;
-    margin: 0;
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'system-ui', roboto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
-    min-height: 100vh; 
+    background-color: var(--background-color);
+    font-family: 'Roboto', system-ui;
+    color: var(--text-color);
 }
 
 
+.navbar:hover {
+    width: 20%;
+}
+
+/* Contenedor principal ocupa todo el espacio restante */
 .app-container {
     display: flex;
-    width: 100%;
-    margin-left: 16%; 
     flex-direction: column;
-    padding: 1rem;
+    flex-grow: 1;
+    margin-left: 20%; /* Deja espacio para el navbar */
+    padding: 0.5rem;
 }
 
 main {
-    margin-left: 65%; 
-    width: 85%; 
+    width: 90%;
     padding: 2rem;
     transition: margin-left 0.3s ease-in-out;
 }
 
 .navbar:hover + main {
-    margin-left: 85%; 
+    margin-left: 10%; 
     width: 80%;
 }

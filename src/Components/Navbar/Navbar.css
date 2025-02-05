@@ -4,14 +4,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 16%; /* Fija el ancho del navbar */
+    width: 16%;
     height: 100vh;
     padding: 2rem 1rem;
     align-items: center;
     box-shadow: 3px 0 10px var(--shadown-color);
-    position: fixed; /* Fijo a la izquierda */
+    position: fixed;
     top: 0;
-    left: 0; /* Se asegura que quede pegado a la izquierda */
+    left: 0;
     bottom: 0;
     transition: width 0.3s ease-in-out;
 }
