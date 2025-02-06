@@ -4,17 +4,14 @@ import { getGiftByID } from "../../helpers/getGifByID";
 import "./Fav.css";
 
 export const Fav = () => {
-    const [likedGifs, setLikedGifs] = useState([]); // Estado para almacenar los datos completos de los GIFs
-    const [isLoading, setIsLoading] = useState(true); // Para controlar el estado de carga
+    const [likedGifs, setLikedGifs] = useState([]); 
+    const [isLoading, setIsLoading] = useState(true);
 
-    // Obtener los GIFs favoritos desde localStorage cuando el componente se monte
     useEffect(() => {
         const savedLikes = JSON.parse(localStorage.getItem("likedGifs")) || {};
 
-        // Filtrar los GIFs favoritos y guardar solo aquellos que estén "likeados"
         const likedGifIds = Object.keys(savedLikes).filter(id => savedLikes[id]);
 
-        // Ahora, obtenemos los detalles de cada GIF favorito
         const fetchLikedGifs = async () => {
             const gifs = await Promise.all(
                 likedGifIds.map(async (id) => {
@@ -22,8 +19,8 @@ export const Fav = () => {
                     return gifData;
                 })
             );
-            setLikedGifs(gifs); // Guardamos los datos de los GIFs favoritos
-            setIsLoading(false); // Detenemos la carga una vez que los GIFs se han cargado
+            setLikedGifs(gifs); 
+            setIsLoading(false); 
         };
 
         fetchLikedGifs();
