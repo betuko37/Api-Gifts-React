@@ -7,9 +7,7 @@ import { GridGifts } from "../GridGifts/GridGifts";
 export const Categories = () => {
 
   const [category, setCategory] = useState([
-    "One Punch",
-    "Samurai X",
-    "Dragon Ball",
+    "One Punch"
   ]);
 
   const onNewCategory = (newCategory) => {
