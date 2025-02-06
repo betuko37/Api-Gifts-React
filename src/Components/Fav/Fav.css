@@ -1,0 +1,81 @@
+/* Contenedor principal para los GIFs favoritos */
+.fav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del título */
+.fav-container h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+/* Grid de GIFs favoritos */
+.fav-gifs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Estilo de cada tarjeta de GIF */
+.gif-card {
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gif-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.gif-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.gif-title {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Estilo para el botón de like */
+.like-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.like-button:hover {
+    color: var(--secondary-color);
+}
+
+/* Estilo para el mensaje de no favoritos */
+.fav-container p {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Estilo para los mensajes de carga */
+.fav-container .loading {
+    font-size: 18px;
+    color: var(--shadown-color);
+}

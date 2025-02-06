@@ -16,34 +16,48 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    display: flex;
     background-color: var(--background-color);
     font-family: 'Roboto', system-ui;
     color: var(--text-color);
 }
 
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Navbar fijo a la izquierda */
+.navbar {
+    width: 16%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 2rem 1rem;
+    align-items: center;
+    box-shadow: 3px 0 10px var(--shadown-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
 
 .navbar:hover {
     width: 20%;
 }
 
-/* Contenedor principal ocupa todo el espacio restante */
+/* Ajusta el contenido principal para que no se solape con el navbar */
 .app-container {
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
-    margin-left: 20%; /* Deja espacio para el navbar */
-    padding: 0.5rem;
-}
-
-main {
-    width: 90%;
-    padding: 2rem;
+    margin-left: 20%; /* Misma medida del navbar */
+    padding: 1rem;
     transition: margin-left 0.3s ease-in-out;
 }
 
-.navbar:hover + main {
-    margin-left: 10%; 
-    width: 80%;
+/* Ajusta el contenido cuando el navbar se expande */
+.navbar:hover ~ .app-container {
+    margin-left: 25%;
 }

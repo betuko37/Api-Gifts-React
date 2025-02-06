@@ -6,22 +6,18 @@ import { GridGifts } from "../GridGifts/GridGifts";
 
 export const Categories = () => {
 
-  const [category, setCategory] = useState([
-    "One Punch"
-  ]);
+  const [category, setCategory] = useState(['']);
+  
 
   const onNewCategory = (newCategory) => {
     
     if (category.includes(newCategory)) return;
-    setCategory([newCategory, ...category]);
+    setCategory([newCategory]);
   
   };
 
   return (
     <>
-
-      {/* Titulo */}
-      <h2>GifExpertApp</h2>
 
       {/* Input */}
       <Searchh onNewCategory={onNewCategory} />
