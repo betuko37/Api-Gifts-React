@@ -1,22 +1,25 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Importa useLocation
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaGithub, FaHome, FaStar, FaFontAwesome, FaSearch, FaRandom } from "react-icons/fa";
 import PropTypes from "prop-types";
 
+export const Navbar = ({ empresa, id_fb, user_insta, user_git, num_wha }) => {
+  const location = useLocation(); // Obtiene la ruta actual
 
-export const Navbar = ({empresa,id_fb,user_insta,user_git,num_wha}) => {
+  // Función para verificar si el enlace está activo
+  const isActive = (path) => location.pathname === path ? "active" : "";
 
-    return(
-        <nav className="navbar">
+  return (
+    <nav className="navbar">
       <h1 className="title">{empresa}</h1>
       <div className="links">
-      <Link to="/"> Inicio <FaHome/></Link>
-        <Link to="/favorites"> Favoritos <FaStar/></Link>
-        <Link to="/tendency"> Tendencia <FaFontAwesome/></Link>
-        <Link to="/search"> Buscar <FaSearch/> </Link>
-        <Link to="/category"> Categorías <BiSolidCategoryAlt /></Link>
-        <Link to="/random"> Aleatorio <FaRandom/></Link>
+        <Link to="/" className={isActive("/")}> Inicio <FaHome /></Link>
+        <Link to="/favorites" className={isActive("/favorites")}> Favoritos <FaStar /></Link>
+        <Link to="/tendency" className={isActive("/tendency")}> Tendencia <FaFontAwesome /></Link>
+        <Link to="/search" className={isActive("/search")}> Buscar <FaSearch /> </Link>
+        <Link to="/category" className={isActive("/category")}> Categorías <BiSolidCategoryAlt /></Link>
+        <Link to="/random" className={isActive("/random")}> Aleatorio <FaRandom /></Link>
       </div>
       <div className="socials">
         <a href={`https://www.facebook.com/profile.php?id=${id_fb}`} target="_blank" rel="noopener noreferrer">
@@ -33,14 +36,13 @@ export const Navbar = ({empresa,id_fb,user_insta,user_git,num_wha}) => {
         </a>
       </div>
     </nav>
-    );
+  );
 };
 
-
 Navbar.propTypes = {
-    empresa: PropTypes.string.isRequired,
-    id_fb: PropTypes.number,
-    user_insta: PropTypes.string,
-    user_git: PropTypes.string,
-    num_wha: PropTypes.number,
-}
+  empresa: PropTypes.string.isRequired,
+  id_fb: PropTypes.number,
+  user_insta: PropTypes.string,
+  user_git: PropTypes.string,
+  num_wha: PropTypes.number,
+};

@@ -19,7 +19,7 @@
 .fav-gifs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
     justify-items: center;
 }
 
@@ -39,8 +39,8 @@
 }
 
 .gif-image {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 200px;
     border-bottom: 2px solid var(--border-color);
 }
 
