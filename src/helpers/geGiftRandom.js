@@ -1,4 +1,4 @@
-import { API_KEY } from "../config/apikey";
+import { API_KEY } from "../config/apiKey";
 
 export const getRandomGift = async () => {
     const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;

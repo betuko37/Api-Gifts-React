@@ -1,4 +1,4 @@
-import { API_KEY } from "../config/apikey";
+import { API_KEY } from "../config/apiKey";
 
 export const getCategoryGifs = async (category, limit = 20, rating = "g") => {
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${category}&limit=${limit}&rating=${rating}`;

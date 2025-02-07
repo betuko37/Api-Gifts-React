@@ -1,4 +1,4 @@
-import { API_KEY } from "../config/apikey";
+import { API_KEY } from '../config/apiKey';
 
 export const getTrendingGifs = async (limit = 10, rating = "r", offset = 0) => {
     const url = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&rating=${rating}&offset=${offset}&country_code:MX`;

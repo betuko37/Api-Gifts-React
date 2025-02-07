@@ -1,4 +1,4 @@
-import { API_KEY } from "../config/apikey";
+import { API_KEY } from "../config/apiKey";
 
 export const getGifts = async (category, page = 1) => {
     const limit = 12;
