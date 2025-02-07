@@ -1,4 +1,4 @@
-import { Fav } from '../components/Fav/Fav';
+import { Fav } from '../Components/Fav/Fav';
 import '../Components/Fav/Fav.css';
 
 const Favorites = () => {
