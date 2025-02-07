@@ -7,7 +7,7 @@ const App = () => {
     <Router>
       <div className="container">
         <Navbar
-          empresa="Gift-API"
+          empresa="GifXplore"
           id_fb={61567038896683}
           user_insta="Betuko.35"
           user_git="betuko37"
