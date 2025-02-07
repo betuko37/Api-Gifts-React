@@ -1,0 +1,58 @@
+.trending-container {
+    text-align: center;
+    padding: 5rem;
+}
+
+
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 100px;
+    justify-items: center;
+}
+
+.gif-card {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.gif-card:hover {
+    transform: scale(1.05);
+}
+
+.gif-image {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.like-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+.trending-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffcc00;
+    text-shadow: 1px 3px 8px rgba(255, 204, 0, 0.6);
+}
+
+.trending-description {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 2rem auto;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+}

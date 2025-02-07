@@ -1,10 +1,10 @@
-/* import  {RandomGiftComponent}  from "../Components/RandomGift/RandomGift";
- */
+import  {RandomGiftComponent}  from "../Components/RandomGift/RandomGift";
+
 const Random = () => {
     return (
       <>
-{/*         <RandomGiftComponent />
- */}      
+         <RandomGiftComponent />
+      
          </>
     );
   };

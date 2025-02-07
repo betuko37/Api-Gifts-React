@@ -4,7 +4,7 @@ import { getGiftByID } from "../../helpers/getGifByID";
 import "./Fav.css";
 
 export const Fav = () => {
-    const [likedGifs, setLikedGifs] = useState([]); 
+    const [likedGifs, setLikedGifs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -19,8 +19,8 @@ export const Fav = () => {
                     return gifData;
                 })
             );
-            setLikedGifs(gifs); 
-            setIsLoading(false); 
+            setLikedGifs(gifs);
+            setIsLoading(false);
         };
 
         fetchLikedGifs();
@@ -28,7 +28,6 @@ export const Fav = () => {
 
     return (
         <div className="fav-container">
-            <h2>GIFs Favoritos</h2>
             <div className="fav-gifs">
                 {isLoading ? (
                     <p>Cargando GIFs favoritos...</p>

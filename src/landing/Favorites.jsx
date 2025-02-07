@@ -1,5 +1,6 @@
 import { Fav } from '../components/Fav/Fav';
 import '../Components/Fav/Fav.css';
+
 const Favorites = () => {
   return (
     <div className="fav-welcome">
@@ -10,8 +11,6 @@ const Favorites = () => {
     </p>
     <Fav />
 </div>
-
-
   );
 };
 

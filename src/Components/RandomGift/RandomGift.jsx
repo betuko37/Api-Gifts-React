@@ -15,7 +15,7 @@ export const RandomGiftComponent = () => {
     }, []);
 
     return (
-        <div className="container ">
+        <div className="container-general">
             {gift && (
                 <div className="container-gift">
                     <h2 className="gift-title">{gift.title}</h2>
