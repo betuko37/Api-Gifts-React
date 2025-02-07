@@ -1,1 +1,4 @@
-export const API_KEY = 'QiNfHWnccV2zOYJ1HMxJmwm2gID2DG0M';
+export const API_KEY = '6NmFeFxqTIEQUWsQIAVucQrnow9kZeoj';
+//6NmFeFxqTIEQUWsQIAVucQrnow9kZeoj
+//QiNfHWnccV2zOYJ1HMxJmwm2gID2DG0M
+//oPOkLQrDj77m0AfVTRHJBXZIJtDOs1yn

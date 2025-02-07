@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-height: 100vh;
+    background: var(--background-color);
+}
+
+.container-gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.gift-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.gift-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gift-image:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.random-button {
+    margin-top: 24px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #ff5a9e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out, transform 0.2s;
+}
+
+.random-button:hover {
+    background: #e04887;
+    transform: translateY(-3px);
+}
