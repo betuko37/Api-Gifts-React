@@ -10,7 +10,7 @@ const App = () => {
           empresa="Gift-API"
           id_fb={61567038896683}
           user_insta="Betuko.35"
-          user_git="Hectorvale95"
+          user_git="betuko37"
           num_wha={6621324345}
         />
         <div className="app-container">

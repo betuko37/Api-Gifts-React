@@ -13,7 +13,7 @@ const AppRouter = () => {
       <Route path="/favorites" element={<Favorites />} />
       <Route path="/tendency" element={<Tendency />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/category" element={<Category />} />
+      <Route path="/category/:categoryName" element={<Category />} />  {/* Ruta dinámica */}
       <Route path="/random" element={<Random />} />
     </Routes>
   );

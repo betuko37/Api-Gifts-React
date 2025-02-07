@@ -1,9 +1,11 @@
+/* import Categoryy from "../Components/Category/Category";
+ */import {CategoriesGrid} from "../Components/CategoriesGrid/CategoriesGrid";
 
 const Category = () => {
     return (
       <div>
-        <h1>Category Page</h1>
-        <p>hola</p>        
+{/*         <Categoryy /> 
+ */}        <CategoriesGrid />    
       </div>
     );
   };
