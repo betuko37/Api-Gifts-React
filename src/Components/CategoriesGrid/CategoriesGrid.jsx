@@ -1,25 +1,37 @@
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { CategoryCard } from "../CategoryCard/CategoryCard";
+import {getCategories} from '../../helpers/getCategories'
 import "./CategoriesGrid.css";
 
-const categories = [
-    { name: "Animales", imageUrl: "https://via.placeholder.com/300x200?text=Animales" },
-    { name: "Deportes", imageUrl: "https://via.placeholder.com/300x200?text=Deportes" },
-    { name: "Música", imageUrl: "https://via.placeholder.com/300x200?text=Música" },
-    { name: "Películas", imageUrl: "https://via.placeholder.com/300x200?text=Películas" },
-    { name: "Memes", imageUrl: "https://via.placeholder.com/300x200?text=Memes" },
-    { name: "Videojuegos", imageUrl: "https://via.placeholder.com/300x200?text=Videojuegos" },
-];
+
 
 export const CategoriesGrid = () => {
+
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        getCategories().then(setCategories);
+    }, []);
+
+    const navigate = useNavigate();
+
+    const handleCategoryClick = (category) => {
+        navigate(`/category/${category}`);
+    };
+
     return (
         <div className="categories-grid">
             {categories.map((category) => (
-                <CategoryCard 
-                    key={category.name} 
-                    category={category.name} 
-                    imageUrl={category.imageUrl} 
-                />
+                <div key={category.name} onClick={() => handleCategoryClick(category.name)}>
+                    <CategoryCard 
+                        category={category.name} 
+                        imageUrl={category.imageUrl} 
+                    />
+                </div>
             ))}
         </div>
     );
 };
+
+

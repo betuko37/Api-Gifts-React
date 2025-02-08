@@ -1,35 +1,39 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { getCategoryGifs } from "../../helpers/getGiftCategory";
 import { GifItems } from "../GifItem/GifItem";
 import "./Category.css";
 
-const Category = () => {
-    const { categoryName } = useParams();
+const Categoryy = () => {
+    const { category } = useParams(); // Obtener la categoría desde la URL
     const [gifs, setGifs] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(true);
-        getCategoryGifs(categoryName)
-            .then((newGifs) => {
-                setGifs(newGifs);
-                setIsLoading(false);
-            })
-            .catch(() => setIsLoading(false));
-    }, [categoryName]);
+        setLoading(true);
+        getCategoryGifs(category)
+            .then(setGifs)
+            .finally(() => setLoading(false));
+    }, [category]);
 
     return (
         <div className="category-container">
-            <h2 className="category-title">Categoría: {categoryName}</h2>
-            {isLoading && <p>Cargando...</p>}
-            <div className="gif-grid">
-                {gifs.map((gif) => (
-                    <GifItems key={gif.id} {...gif} />
-                ))}
-            </div>
+            <h1 className="category-title">{category}</h1>
+            <p>Mostrando GIFs relacionados con {category}</p>
+
+            {loading ? (
+                <p>Cargando...</p>
+            ) : gifs.length > 0 ? (
+                <div className="gif-grid">
+                    {gifs.map((gif) => (
+                        <GifItems key={gif.id} id={gif.id} url={gif.url} title={gif.title} />
+                    ))}
+                </div>
+            ) : (
+                <p>No se encontraron GIFs para esta categoría.</p>
+            )}
         </div>
     );
 };
 
-export default Category;
+export default Categoryy;

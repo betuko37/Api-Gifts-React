@@ -1,13 +1,16 @@
-/* import Categoryy from "../Components/Category/Category";
- */import {CategoriesGrid} from "../Components/CategoriesGrid/CategoriesGrid";
+import { useState } from "react";
+import Categoryy from "../Components/Category/Category";
+import { CategoriesGrid } from "../Components/CategoriesGrid/CategoriesGrid";
 
 const Category = () => {
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
     return (
-      <div>
-{/*         <Categoryy /> 
- */}        <CategoriesGrid />    
-      </div>
+        <div>
+            <CategoriesGrid onSelectCategory={setSelectedCategory} />
+            {selectedCategory && <Categoryy category={selectedCategory} />}
+        </div>
     );
-  };
-  
-  export default Category; 
+};
+
+export default Category;

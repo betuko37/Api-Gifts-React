@@ -1,0 +1,79 @@
+.category-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gif-card {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.gif-card:hover {
+    transform: scale(1.06);
+}
+
+.gif-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.gif-title {
+    height: 55px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 10px 0;
+    padding: 0 10px;
+    word-wrap: break-word;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.like-button.liked {
+    color: red;
+    transform: scale(1.2);
+}
